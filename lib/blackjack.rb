@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 require 'pry'
+=======
+
+>>>>>>> ad92f3ffde6ab7fe11447cb8e764daa70ad6cd2b
 
 def welcome
   puts "Welcome to the Blackjack Table"
@@ -33,6 +37,7 @@ end
 def hit?(card_total)
   prompt_user
   input = get_user_input
+<<<<<<< HEAD
   until input == "h" || input == "s"
   	invalid command
   	prompt user
@@ -42,6 +47,16 @@ def hit?(card_total)
     card_total
   else
     card_total
+=======
+  if input == 's'
+    return card_total
+  elsif input == 'h'
+    new_total = deal_card + card_total
+    return new_total
+  else
+    invalid_command
+    prompt_user
+>>>>>>> ad92f3ffde6ab7fe11447cb8e764daa70ad6cd2b
   end
 end
 
@@ -57,7 +72,11 @@ def runner
   welcome
   card_total = initial_round
   until card_total > 21
+<<<<<<< HEAD
     card_total = hit?(card_total)
+=======
+    hit?(card_total)
+>>>>>>> ad92f3ffde6ab7fe11447cb8e764daa70ad6cd2b
     display_card_total(card_total)
   end
   end_game(card_total)
